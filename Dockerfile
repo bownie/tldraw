@@ -41,4 +41,6 @@ RUN . /home/${TLDRAW_USER}/.profile && \
 
 COPY yarn_start.sh /home/${TLDRAW_USER}/tldraw/
 
+RUN chmod 755 /home/${TLDRAW_USER}/tldraw/yarn_start.sh
+
 ENTRYPOINT /home/${TLDRAW_USER}/tldraw/yarn_start.sh
