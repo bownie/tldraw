@@ -39,8 +39,6 @@ RUN . /home/${TLDRAW_USER}/.profile && \
     cd /home/${TLDRAW_USER}/tldraw && \
     yarn install --network-timeout 3600000
 
-COPY yarn_start.sh /home/${TLDRAW_USER}/tldraw/
-
-RUN chmod 755 /home/${TLDRAW_USER}/tldraw/yarn_start.sh
+COPY --chmod=0755 yarn_start.sh /home/${TLDRAW_USER}/tldraw/
 
 ENTRYPOINT /home/${TLDRAW_USER}/tldraw/yarn_start.sh
