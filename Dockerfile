@@ -37,7 +37,7 @@ RUN cd /home/${TLDRAW_USER} && \
 # build tldraw
 RUN . /home/${TLDRAW_USER}/.profile && \
     cd /home/${TLDRAW_USER}/tldraw && \
-    yarn install --network-timeout 3600000 --non-interactive
+    yarn install --network-timeout 3600000
 
 COPY yarn_start.sh /home/${TLDRAW_USER}/tldraw/
 
